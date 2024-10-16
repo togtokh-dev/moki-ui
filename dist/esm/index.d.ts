@@ -53,3 +53,5 @@ declare const _default: {
     };
 };
 export default _default;
+export { default as Button } from "./components/mini-web/button";
+export { default as Input } from "./components/mini-web/form/input";
