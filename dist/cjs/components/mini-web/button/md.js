@@ -22,12 +22,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = default_1;
 const react_1 = __importStar(require("react"));
-const framer_motion_1 = require("framer-motion");
-function default_1(props) {
-    const { children, backgroundColor, className = "", type = "button", title, disabled, handleClick, disableHover = false, useStyle = false, ref, } = props;
+const ButtonMD = (props) => {
+    const { children, backgroundColor, className = "", type = "button", title, disabled, onClick, disableHover = false, useStyle = false } = props, rest = __rest(props, ["children", "backgroundColor", "className", "type", "title", "disabled", "onClick", "disableHover", "useStyle"]);
     const [isFocused, setFocus] = (0, react_1.useState)(false);
     const style = useStyle
         ? {
@@ -38,6 +47,7 @@ function default_1(props) {
                     : backgroundColor,
         }
         : {};
-    return (react_1.default.createElement(framer_motion_1.motion.button, { className: `react-togtokh-dev dev-btn dev-btn-36 text-500-14 dev-border-8  ${className}`, onMouseEnter: () => setFocus(true), onMouseLeave: () => setFocus(false), style: style, type: type, title: title, onClick: handleClick, disabled: disabled ? true : false, ref: ref }, children));
-}
+    return (react_1.default.createElement("button", Object.assign({ className: `moki-ui-dev dev-btn dev-btn-36 text-500-14 dev-border-8  ${className}`, onMouseEnter: () => setFocus(true), onMouseLeave: () => setFocus(false), style: style, type: type, title: title, onClick: onClick, disabled: disabled }, rest), children));
+};
+exports.default = ButtonMD;
 //# sourceMappingURL=md.js.map

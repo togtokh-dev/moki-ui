@@ -1,11 +1,5 @@
 declare const _default: {
     MiniWeb: {
-        Button: {
-            SM: typeof import("./components/mini-web/button/sm").default;
-            MD: typeof import("./components/mini-web/button/md").default;
-            LG: typeof import("./components/mini-web/button/lg").default;
-            XL: typeof import("./components/mini-web/button/xl").default;
-        };
         Form: {
             Input: {
                 LG: typeof import("./components/mini-web/form/input/lg").default;
@@ -53,5 +47,8 @@ declare const _default: {
     };
 };
 export default _default;
-export { default as Button } from "./components/mini-web/button";
 export { default as Input } from "./components/mini-web/form/input";
+export { default as ButtonLG } from "./components/mini-web/button/lg";
+export { default as ButtonMD } from "./components/mini-web/button/md";
+export { default as ButtonSM } from "./components/mini-web/button/sm";
+export { default as ButtonXL } from "./components/mini-web/button/xl";

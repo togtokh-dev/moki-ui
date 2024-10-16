@@ -1,6 +1,5 @@
-import SM from "./sm";
-import MD from "./md";
-import LG from "./lg";
-import XL from "./xl";
-export default { SM, MD, LG, XL };
+export { default as SM } from "./sm";
+export { default as MD } from "./md";
+export { default as LG } from "./lg";
+export { default as XL } from "./xl";
 //# sourceMappingURL=index.js.map

@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   backgroundColor?: string;
   className?: string;
-  type?: "button" | "submit" | "reset";
   title?: string;
-  disabled?: Boolean;
-  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  disableHover?: Boolean;
-  ref?: any;
-  useStyle?: Boolean;
+  disableHover?: boolean;
+  useStyle?: boolean;
 }
 
-export default function (props: Props) {
+const ButtonXL: React.FC<Props> = (props) => {
   const {
     children,
     backgroundColor,
@@ -22,12 +17,14 @@ export default function (props: Props) {
     type = "button",
     title,
     disabled,
-    handleClick,
+    onClick,
     disableHover = false,
     useStyle = false,
-    ref,
+    ...rest
   } = props;
+
   const [isFocused, setFocus] = useState(false);
+
   const style = useStyle
     ? {
         background: disableHover
@@ -39,18 +36,20 @@ export default function (props: Props) {
     : {};
 
   return (
-    <motion.button
-      className={`react-togtokh-dev dev-btn dev-btn-48 text-500-16 dev-border-8  ${className}`}
+    <button
+      className={`moki-ui-dev dev-btn dev-btn-48 text-500-16 dev-border-8  ${className}`}
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
       style={style}
       type={type}
       title={title}
-      onClick={handleClick}
-      disabled={disabled ? true : false}
-      ref={ref}
+      onClick={onClick}
+      disabled={disabled}
+      {...rest} // Spread the remaining props to the button
     >
       {children}
-    </motion.button>
+    </button>
   );
-}
+};
+
+export default ButtonXL;
