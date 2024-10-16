@@ -1,0 +1,6 @@
+npm install
+npm run build
+npm publish
+git add ./
+git commit -m "main"
+git push origin main

@@ -1,0 +1,79 @@
+.dev-switch-checkbox-xl {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.dev-switch-label-xl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 51px;
+  height: 31px;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.dev-switch-label-xl .dev-switch-button-xl {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.dev-switch-checkbox-xl:checked + .dev-switch-label-xl .dev-switch-button-xl {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+.dev-switch-label-xl:active .dev-switch-button-xl {
+  width: 35px;
+}
+
+.dev-switch-checkbox-lg {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.dev-switch-label-lg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 40px;
+  height: 24px;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.dev-switch-label-lg .dev-switch-button-lg {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.dev-switch-checkbox-lg:checked + .dev-switch-label-lg .dev-switch-button-lg {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+.dev-switch-label-lg:active .dev-switch-button-lg {
+  width: 28px;
+}
