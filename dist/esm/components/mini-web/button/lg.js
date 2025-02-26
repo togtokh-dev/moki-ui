@@ -9,9 +9,9 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useState } from "react";
+import React, { useState } from 'react';
 const ButtonLG = (props) => {
-    const { children, backgroundColor, className = "", type = "button", title, disabled, onClick, disableHover = false, useStyle = false } = props, rest = __rest(props, ["children", "backgroundColor", "className", "type", "title", "disabled", "onClick", "disableHover", "useStyle"]);
+    const { children, backgroundColor, className = '', type = 'button', title, disabled, onClick, disableHover = false, useStyle = false } = props, rest = __rest(props, ["children", "backgroundColor", "className", "type", "title", "disabled", "onClick", "disableHover", "useStyle"]);
     const [isFocused, setFocus] = useState(false);
     const style = useStyle
         ? {
@@ -22,7 +22,7 @@ const ButtonLG = (props) => {
                     : backgroundColor,
         }
         : {};
-    return (React.createElement("button", Object.assign({ className: `moki-ui-dev dev-btn dev-btn-40 text-500-14 dev-border-8 ${className}`, onMouseEnter: () => setFocus(true), onMouseLeave: () => setFocus(false), style: style, type: type, title: title, onClick: onClick, disabled: disabled }, rest), children));
+    return (React.createElement("button", Object.assign({ className: `moki-ui-dev dev-btn dev-btn-40 text-400-14 dev-border-8 ${className}`, onMouseEnter: () => setFocus(true), onMouseLeave: () => setFocus(false), style: style, type: type, title: title, onClick: onClick, disabled: disabled }, rest), children));
 };
 export default ButtonLG;
 //# sourceMappingURL=lg.js.map

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ const ButtonLG: React.FC<Props> = (props) => {
   const {
     children,
     backgroundColor,
-    className = "",
-    type = "button",
+    className = '',
+    type = 'button',
     title,
     disabled,
     onClick,
@@ -37,7 +37,7 @@ const ButtonLG: React.FC<Props> = (props) => {
 
   return (
     <button
-      className={`moki-ui-dev dev-btn dev-btn-40 text-500-14 dev-border-8 ${className}`}
+      className={`moki-ui-dev dev-btn dev-btn-40 text-400-14 dev-border-8 ${className}`}
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
       style={style}
